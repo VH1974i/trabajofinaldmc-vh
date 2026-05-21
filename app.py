@@ -32,12 +32,10 @@ elif opcion == "Ejercicio 1":
        resultado = ppto - gasto
        st.write(f"El resultado es {resultado}")
        
-       if gasto > ppto:
-           st.warning("El gasto es mayor al presupuesto!")
-       elif gasto == ppto:
-           st.warning("El gasto es igual al presupuesto!")
+       if gasto <= ppto:
+           st.success("El gasto está dentro del presupuesto!")
        else:
-           st.success("El gasto es menor al presupuesto!")
+           st.warning("El presupuesto fue excedido!")
     
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
