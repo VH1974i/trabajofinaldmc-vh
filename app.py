@@ -2,9 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
-st.sidebar.title("Opciones")
 st.sidebar.image("dmc.png")
+st.sidebar.title("Opciones")
 
 #Ejemplo de SelectBox
 opcion = st.sidebar.selectbox(
