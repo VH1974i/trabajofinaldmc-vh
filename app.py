@@ -39,7 +39,9 @@ elif opcion == "Ejercicio 1":
     
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
-   
+   st.subheader("Listas y Diccionarios")
+
+
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
 
