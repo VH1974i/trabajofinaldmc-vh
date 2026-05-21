@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 
 
-st.title("Mi primera aplicación en python")
-
 st.sidebar.title("Opciones")
 st.sidebar.image("dmc.png")
 
@@ -18,6 +16,13 @@ opcion = st.sidebar.selectbox(
 
 if opcion == "Home":
    st.write("¡Bienvenido al menú Home!")
+
+   st.markdown("**DMC Modulo 1 - Python Fundamentals**")
+   st.write("Alumno: Victor Hugo Ramírez Ruiz")
+   st.write("Curso : Python Fundamentals")
+   st.write("Año   : 2026")
+   st.write("Alumno: Victor Hugo Ramírez Ruiz")
+   st.write("Tecnologías utilizadas: Python, Streamlit.")
     
 elif opcion == "Ejercicio 1":
    st.write("¡Bienvenido al menú Ejercicio 1!")
