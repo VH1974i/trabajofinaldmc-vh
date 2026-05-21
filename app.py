@@ -14,12 +14,12 @@ opcion = st.sidebar.selectbox(
 if opcion == "Home":
    st.write("¡Bienvenido al menú Home!")
 
-   st.markdown("# **DMC Modulo 1 - Python Fundamentals**")
+   st.title("DMC Modulo 1 - Python Fundamentals")
    st.markdown("### Alumno: Victor Hugo Ramírez Ruiz")
    st.markdown("### Curso : Python Fundamentals")
    st.markdown("### Año   : 2026")
    st.markdown("### Alumno: Victor Hugo Ramírez Ruiz")
-   st.markdown("### Tecnologías utilizadas: Python, Streamlit.")
+   st.write("Tecnologías utilizadas: Python, Streamlit.")
     
 elif opcion == "Ejercicio 1":
    st.write("¡Bienvenido al menú Ejercicio 1!")
