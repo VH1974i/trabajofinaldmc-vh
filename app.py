@@ -6,8 +6,6 @@ import numpy as np
 st.sidebar.title("Opciones")
 st.sidebar.image("dmc.png")
 
-st.write("Elaborado por: Victor Hugo Ramirez")
-
 #Ejemplo de SelectBox
 opcion = st.sidebar.selectbox(
     "Seleccione una opción",
@@ -17,7 +15,10 @@ opcion = st.sidebar.selectbox(
 if opcion == "Home":
    st.write("¡Bienvenido al menú Home!")
 
-   st.markdown("**DMC Modulo 1 - Python Fundamentals**")
+   st.markdown("# **DMC Modulo 1 - Python Fundamentals**")
+   st.markdown("## **DMC Modulo 1 - Python Fundamentals**")
+   st.markdown("### **DMC Modulo 1 - Python Fundamentals**")
+   st.markdown("#### **DMC Modulo 1 - Python Fundamentals**")
    st.write("Alumno: Victor Hugo Ramírez Ruiz")
    st.write("Curso : Python Fundamentals")
    st.write("Año   : 2026")
