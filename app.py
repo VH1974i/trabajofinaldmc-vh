@@ -27,6 +27,16 @@ elif opcion == "Ejercicio 1":
    st.subheader("Variables y condicionales")
    ppto  = st.number_input("Ingrese el presupuesto", min_value =0, value=0)
    gasto = st.number_input("Ingrese el gasto", min_value =0, value=0)
+   resultado = ppto - gasto
+   st.write(f"El resultado es {resultado}")
+
+   if st.button("Evaluación"):
+       if gasto > ppto:
+           st.warning("El gasto es mayor al presupuesto!")
+       elif gasto == ppto:
+           st.warning("El gasto es igual al presupuesto!")
+       else:
+           st.success("El gasto es menor al presupuesto!")
     
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
