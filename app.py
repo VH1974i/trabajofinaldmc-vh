@@ -15,10 +15,10 @@ if opcion == "Home":
    st.write("¡Bienvenido al menú Home!")
 
    st.title("DMC Modulo 1 - Python Fundamentals")
-   st.markdown("### Alumno: Victor Hugo Ramírez Ruiz")
-   st.markdown("### Curso : Python Fundamentals")
-   st.markdown("### Año   : 2026")
-   st.markdown("### Alumno: Victor Hugo Ramírez Ruiz")
+   st.write("### Alumno: Victor Hugo Ramírez Ruiz")
+   st.write("### Curso : Python Fundamentals")
+   st.write("### Año   : 2026")
+   st.write("### Alumno: Victor Hugo Ramírez Ruiz")
    st.write("Tecnologías utilizadas: Python, Streamlit.")
     
 elif opcion == "Ejercicio 1":
