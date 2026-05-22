@@ -69,7 +69,7 @@ elif opcion == "Ejercicio 2":
                st.success(f"¡Registro agregado satisfactoriamente!")
 
    if st.button("Limpiar lista!"):
-       st.session_state.actividades = []
+       st.session_state.actividades.clear()
     
    tabla = pd.DataFrame(st.session_state.actividades)
    event = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
