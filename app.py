@@ -61,7 +61,7 @@ elif opcion == "Ejercicio 2":
               for registro in st.session_state.actividades
            )
 
-           if existe_duplicado:
+           if len(st.session_state.actividades)>0 and existe_duplicado:
                # Si ya existe, mostramos una alerta y detenemos el proceso
                st.error(f"⚠️ La actividad '{nombre}' ya existe en la lista. Elige un nombre diferente.")
            else:
