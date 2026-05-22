@@ -61,6 +61,9 @@ elif opcion == "Ejercicio 2":
               for registro in st.session_state.actividades
            )
 
+           tabla = pd.DataFrame(st.session_state.actividades)
+           event = st.dataframe(tabla)
+           
            st.write("Registros", len(st.session_state.actividades))
 
            if len(st.session_state.actividades)>0 and existe_duplicado:
