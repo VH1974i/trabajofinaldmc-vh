@@ -61,8 +61,6 @@ elif opcion == "Ejercicio 2":
               for registro in st.session_state.actividades
            )
 
-           st.write("Registros", len(st.session_state.actividades))
-
            if len(st.session_state.actividades)>0 and existe_duplicado:
                # Si ya existe, mostramos una alerta y detenemos el proceso
                st.error(f"⚠️ La actividad '{nombre}' ya existe en la lista. Elige un nombre diferente.")
@@ -74,6 +72,7 @@ elif opcion == "Ejercicio 2":
     
    tabla = pd.DataFrame(st.session_state.actividades)
    event = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
+   st.write("Registros", len(st.session_state.actividades))
 
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
