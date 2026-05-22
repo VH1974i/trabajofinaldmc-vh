@@ -69,7 +69,7 @@ elif opcion == "Ejercicio 2":
            else:
                st.session_state.actividades.append(registro)
 
-   if st.buttom("Limpiar lista!"):
+   if st.button("Limpiar lista!"):
        st.session_state.actividades = []
     
    tabla = pd.DataFrame(st.session_state.actividades)
