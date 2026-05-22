@@ -53,8 +53,12 @@ elif opcion == "Ejercicio 2":
                         "Tipo": tipo,
                         "Presupuesto": ppto,
                         "Gasto real": gasto }
-           #actividades["Nombre"].append(registro)
-           actividades.append(registro)
+           actividades["Nombre"].append(nombre)
+           actividades["Tipo"].append(tipo)
+           actividades["Presupuesto"].append(ppto)
+           actividades["Gasto real"].append(gasto)
+           
+           #actividades.append(registro)
            tabla=pd.DataFrame(actividades)
            event = st.dataframe(tabla)
    
