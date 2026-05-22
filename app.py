@@ -5,6 +5,8 @@ import numpy as np
 st.sidebar.image("dmc.png")
 st.sidebar.title("Opciones")
 
+actividades = []
+
 #Ejemplo de SelectBox
 opcion = st.sidebar.selectbox(
     "Seleccione una opción",
@@ -40,7 +42,7 @@ elif opcion == "Ejercicio 1":
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
    st.subheader("Listas y Diccionarios")
-   actividades = []
+#   actividades = []
 
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
