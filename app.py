@@ -5,8 +5,6 @@ import numpy as np
 st.sidebar.image("dmc.png")
 st.sidebar.title("Opciones")
 
-actividades = []
-
 #Ejemplo de SelectBox
 opcion = st.sidebar.selectbox(
     "Seleccione una opción",
@@ -42,8 +40,10 @@ elif opcion == "Ejercicio 1":
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
    st.subheader("Listas y Diccionarios")
-#   actividades = []
 
+   if "actividades" not in st.session_state:
+       st.session_state.actividades = []
+    
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
@@ -55,8 +55,9 @@ elif opcion == "Ejercicio 2":
                         "Tipo": tipo,
                         "Presupuesto": ppto,
                         "Gasto real": gasto }
-           actividades.append(registro)
-           tabla=pd.DataFrame(actividades)
+           
+           st.session_state.actividades.append(registro)
+           tabla=pd.DataFrame(st.session_state.actividades)
            event = st.dataframe(tabla)
    
 elif opcion == "Ejercicio 3":
