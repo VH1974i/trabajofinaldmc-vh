@@ -43,18 +43,20 @@ elif opcion == "Ejercicio 2":
    actividades = {}
 
    nombre = st.text_input("Ingrese el nombre de la actividad")
-   tipo = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
-   ppto = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
-   gasto = st.number_input("Ingrese el gasto", min_value =0, value=0)
+   tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
+   ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
+   gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
 
    if st.button("Agregar"):
-      registro = { "Nombre": nombre,
-                   "Tipo": tipo,
-                   "Presupuesto": ppto,
-                   "Gasto real": gasto }
-      actividades.append(registro)
-      tabla=pd.DataFrame(actividades)
-      event = st.dataframe(tabla)
+       if nombre:
+           registro = { "Nombre": nombre,
+                        "Tipo": tipo,
+                        "Presupuesto": ppto,
+                        "Gasto real": gasto }
+           #actividades["Nombre"].append(registro)
+           actividades.append(registro)
+           tabla=pd.DataFrame(actividades)
+           event = st.dataframe(tabla)
    
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
