@@ -49,7 +49,7 @@ elif opcion == "Ejercicio 2":
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
    gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
 
-   if st.button("Agregar"):
+   if st.button("Agregar", type="primary"):
        if nombre:
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
