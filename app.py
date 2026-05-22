@@ -40,7 +40,7 @@ elif opcion == "Ejercicio 1":
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
    st.subheader("Listas y Diccionarios")
-   actividades = {}
+   actividades = []
 
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
@@ -53,12 +53,7 @@ elif opcion == "Ejercicio 2":
                         "Tipo": tipo,
                         "Presupuesto": ppto,
                         "Gasto real": gasto }
-           actividades["Nombre"].append(nombre)
-           actividades["Tipo"].append(tipo)
-           actividades["Presupuesto"].append(ppto)
-           actividades["Gasto real"].append(gasto)
-           
-           #actividades.append(registro)
+           actividades.append(registro)
            tabla=pd.DataFrame(actividades)
            event = st.dataframe(tabla)
    
