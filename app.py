@@ -52,7 +52,8 @@ elif opcion == "Ejercicio 2":
                    "Tipo": tipo,
                    "Presupuesto": ppto,
                    "Gasto real": gasto }
-      tabla=pd.DataFrame(registro)
+      actividades.append(registro)
+      tabla=pd.DataFrame(actividades)
       event = st.dataframe(tabla)
    
 elif opcion == "Ejercicio 3":
