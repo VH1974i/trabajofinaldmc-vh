@@ -70,7 +70,7 @@ elif opcion == "Ejercicio 2":
                st.session_state.actividades.append(registro)
 
    tabla = pd.DataFrame(st.session_state.actividades)
-   event = st.dataframe(tabla)
+   event = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
 
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
