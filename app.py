@@ -45,14 +45,14 @@ elif opcion == "Ejercicio 2":
        st.session_state.actividades = []
 
    if "mi_pills_selection_key" not in st.session_state:
-       st.session_state["mi_pills_selection_key"] = None
+       st.session_state["mi_pills"] = None
 
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
    gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
 
-   pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single", key="mi_pills_selection_key")
+   pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single", key="mi_pills")
 
    if pills_selection == "Agregar":   #st.button("Agregar", type="primary"):
        if nombre:
@@ -81,7 +81,7 @@ elif opcion == "Ejercicio 2":
            else:
                actividad["Estado"] = "Presupuesto fue excedido!"
 
-   st.session_state["mi_pills_selection_key"] = None
+   st.session_state["mi_pills"] = None
    df_actividades = pd.DataFrame(st.session_state.actividades)
    evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", use_container_width=True)
    st.write("Registros", len(st.session_state.actividades))
