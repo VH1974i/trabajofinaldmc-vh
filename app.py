@@ -90,7 +90,7 @@ elif opcion == "Ejercicio 2":
            cantidad = len(indices_seleccionados)
            st.write("Filas seleccionadas: ", cantidad)
            st.write("Filas seleccionadas x: ", indices_seleccionados)
-           for x inindices_seleccionados:
+           for x in indices_seleccionados:
                st.write(f"Fila: **{x}**")
                st.write(f"Fila: **{x[0]}**")
         
