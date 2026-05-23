@@ -67,7 +67,7 @@ elif opcion == "Ejercicio 2":
                st.error(f"⚠️ La actividad '{nombre}' ya existe en la lista. Elige un nombre diferente.")
            else:
                st.session_state.actividades.append(registro)
-               st.success(f"¡Registro agregado satisfactoriamente!")
+               st.success("¡Registro agregado satisfactoriamente!")
                
    if st.button("Evaluar actividades!"):
        for actividad in st.session_state.actividades:
@@ -90,7 +90,7 @@ elif opcion == "Ejercicio 2":
            st.session_state.actividades = [ actividad
                                             for i, actividad in enumerate(st.session_state.actividades)
                                             if i not in indices_seleccionados ]
-           st.rerun()
+#           st.rerun()
            st.success("Las actividades fueron evaluadas!")
 
 elif opcion == "Ejercicio 3":
