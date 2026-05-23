@@ -55,6 +55,7 @@ elif opcion == "Ejercicio 2":
    pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single", key="pills_key")
 
    if pills_selection == "Agregar":   #st.button("Agregar", type="primary"):
+       st.session_state["pills_key"] = None
        if nombre:
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
@@ -75,13 +76,13 @@ elif opcion == "Ejercicio 2":
                st.success(f"¡Registro agregado satisfactoriamente!")
 
    if pills_selection == "Evaluar actividades": #st.button("Evaluar actividades!"):
+       st.session_state["pills_key"] = None
        for actividad in st.session_state.actividades:
            if actividad["Gasto real"] <= actividad["Presupuesto"]:
                actividad["Estado"] = "Gasto está dentro del presupuesto!"
            else:
                actividad["Estado"] = "Presupuesto fue excedido!"
 
-   st.session_state["pills_key"] = None
    st.rerun()
    df_actividades = pd.DataFrame(st.session_state.actividades)
    evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", use_container_width=True)
