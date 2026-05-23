@@ -92,7 +92,6 @@ elif opcion == "Ejercicio 2":
            st.write("Filas seleccionadas x: ", indices_seleccionados)
            for x in indices_seleccionados:
                st.write(f"Fila: **{x}**")
-               st.write(f"Fila: **{x[0]}**")
         
            #filas_a_eliminar = tabla.index[filas_seleccionadas]
            #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
