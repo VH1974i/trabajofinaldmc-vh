@@ -69,9 +69,6 @@ elif opcion == "Ejercicio 2":
                st.session_state.actividades.append(registro)
                st.success(f"¡Registro agregado satisfactoriamente!")
 
-   if st.button("Limpiar lista!"):
-       st.session_state.actividades.clear()
-
    if st.button("Evaluar actividades!"):
        for actividad in st.session_state.actividades:
            if actividad["Gasto real"] <= actividad["Presupuesto"]:
