@@ -75,6 +75,8 @@ elif opcion == "Ejercicio 2":
                actividad["Estado"] = "Gasto está dentro del presupuesto!"
            else:
                actividad["Estado"] = "Presupuesto fue excedido!"
+               
+       st.success("Las actividades fueron evaluadas!")
 
    df_actividades = pd.DataFrame(st.session_state.actividades)
    evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", width="content")
