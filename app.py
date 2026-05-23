@@ -51,7 +51,7 @@ elif opcion == "Ejercicio 2":
 
    pills_selection = st.pills("Opción", ["Agregar", "Evaluar activadades"], selection_mode="single")
 
-   if pills_selection == "Agregar"   #st.button("Agregar", type="primary"):
+   if pills_selection == "Agregar":   #st.button("Agregar", type="primary"):
        if nombre:
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
@@ -71,7 +71,7 @@ elif opcion == "Ejercicio 2":
                st.session_state.actividades.append(registro)
                st.success(f"¡Registro agregado satisfactoriamente!")
 
-   if pills_selection == "Evaluar actividades" #st.button("Evaluar actividades!"):
+   if pills_selection == "Evaluar actividades": #st.button("Evaluar actividades!"):
        for actividad in st.session_state.actividades:
            if actividad["Gasto real"] <= actividad["Presupuesto"]:
                actividad["Estado"] = "Gasto está dentro del presupuesto!"
