@@ -50,7 +50,7 @@ elif opcion == "Ejercicio 2":
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
-   gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
+   gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0, step=500)
 
    pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single", key="mi_pills")
 
