@@ -89,7 +89,7 @@ elif opcion == "Ejercicio 2":
 
    #st.rerun()
    df_actividades = pd.DataFrame(st.session_state.actividades)
-   evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", use_container_width=True)
+   evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", width=True)
    st.write("Registros", len(st.session_state.actividades))
 
    indices_seleccionados = evento.selection.rows
