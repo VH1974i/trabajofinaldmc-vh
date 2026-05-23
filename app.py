@@ -85,8 +85,9 @@ elif opcion == "Ejercicio 2":
 
    if filas_seleccionadas:
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
-           st.write("Filas seleccionadas: ", filas_seleccionadas)
+           st.write("Filas seleccionadas: ", filas_seleccionadas, len(filas_seleccionadas))
            for x in filas_seleccionadas:
+               st.write(f"Fila: **{x}**")
                st.write(f"Fila: **{x.rows[0]}**")
         
            filas_a_eliminar = tabla.index[filas_seleccionadas]
