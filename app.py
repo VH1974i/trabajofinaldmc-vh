@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+if "actividades" not in st.session_state:
+    st.session_state.actividades = []
+
+if "mi_pills_selection_key" not in st.session_state:
+    st.session_state["mi_pills"] = None
+
 st.sidebar.image("dmc.png")
 st.sidebar.title("Opciones")
 
@@ -40,12 +46,6 @@ elif opcion == "Ejercicio 1":
 elif opcion == "Ejercicio 2":
    st.write("¡Bienvenido al menú Ejercicio 2!")
    st.subheader("Listas y Diccionarios")
-
-   if "actividades" not in st.session_state:
-       st.session_state.actividades = []
-
-   if "mi_pills_selection_key" not in st.session_state:
-       st.session_state["mi_pills"] = None
 
    nombre = st.text_input("Ingrese el nombre de la actividad")
    tipo   = st.selectbox("Seleccione el tipo:", ("Comercio", "Transporte", "Restaurantes", "Turismo"))
