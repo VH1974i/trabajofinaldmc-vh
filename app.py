@@ -54,7 +54,8 @@ elif opcion == "Ejercicio 2":
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
                         "Presupuesto": ppto,
-                        "Gasto real": gasto }
+                        "Gasto real": gasto,
+                        "Estado": ""}
 
            existe_duplicado = any(
               registro["Nombre"].strip().lower() == nombre.strip().lower() 
@@ -70,7 +71,14 @@ elif opcion == "Ejercicio 2":
 
    if st.button("Limpiar lista!"):
        st.session_state.actividades.clear()
-    
+
+   if st.button("Evaluar actividades!"):
+       for actividad in st.session_state.actividades:
+           if actividad["Gasto real"] <= actividad["Presupuesto"]:
+               actividad["Estado"] = "Gasto está dentro del presupuesto!"
+           else:
+               actividad["Estado"] = "Presupuesto fue excedido!"
+
    tabla = pd.DataFrame(st.session_state.actividades)
    event = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
    st.write("Registros", len(st.session_state.actividades))
