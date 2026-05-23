@@ -91,9 +91,10 @@ elif opcion == "Ejercicio 2":
            for x in indices_seleccionados:
                st.write(f"Fila: **{x}**")
 
-           tabla = tabla.drop(indices_seleccionados)
+           #tabla = tabla.drop(indices_seleccionados)
            #filas_a_eliminar = tabla.index[filas_seleccionadas]
            #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
+           st.session_state.actividades = st.session_state.actividades.drop(indices_seleccionados)
 
 
 elif opcion == "Ejercicio 3":
