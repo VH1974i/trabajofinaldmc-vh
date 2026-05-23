@@ -80,12 +80,13 @@ elif opcion == "Ejercicio 2":
                actividad["Estado"] = "Presupuesto fue excedido!"
 
    tabla = pd.DataFrame(st.session_state.actividades)
-   filas_seleccionados = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
+   filas_seleccionadas = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
    st.write("Registros", len(st.session_state.actividades))
 
-   if filas_seleccionados:
+   if filas_seleccionadas:
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
-           filas_a_eliminar = tabla.index[filas_seleccionados]
+           st.write("Filas seleccionadas: ", filas_seleccionadas)
+           filas_a_eliminar = tabla.index[filas_seleccionadas]
            #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
 
 
