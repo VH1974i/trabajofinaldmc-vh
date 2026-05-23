@@ -79,8 +79,8 @@ elif opcion == "Ejercicio 2":
            else:
                actividad["Estado"] = "Presupuesto fue excedido!"
 
-   tabla = pd.DataFrame(st.session_state.actividades)
-   evento = st.dataframe(tabla, on_select="rerun", selection_mode="multi-row")
+   df_actividades = pd.DataFrame(st.session_state.actividades)
+   evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", use_container_width=True)
    st.write("Registros", len(st.session_state.actividades))
 
    indices_seleccionados = evento.selection.rows
@@ -88,14 +88,12 @@ elif opcion == "Ejercicio 2":
    if indices_seleccionados:
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
            st.write("Filas a eliminar: ", len(indices_seleccionados))
-           for x in indices_seleccionados:
-               st.write(f"Fila: **{x}**")
 
-           #tabla = tabla.drop(indices_seleccionados)
-           #filas_a_eliminar = tabla.index[filas_seleccionadas]
-           #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
-           st.session_state.actividades = st.session_state.actividades.drop(indices_seleccionados)
-
+           st.session_state.actividades = [
+            actividad
+            for i, actividad in enumerate(st.session_state.actividades)
+            if i not in indices_seleccionados ]
+           st.rerun()
 
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
