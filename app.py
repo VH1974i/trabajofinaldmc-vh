@@ -82,6 +82,7 @@ elif opcion == "Ejercicio 2":
                actividad["Estado"] = "Presupuesto fue excedido!"
 
    st.session_state["pills_key"] = None
+   st.rerun()
    df_actividades = pd.DataFrame(st.session_state.actividades)
    evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", use_container_width=True)
    st.write("Registros", len(st.session_state.actividades))
