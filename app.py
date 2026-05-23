@@ -87,7 +87,7 @@ elif opcion == "Ejercicio 2":
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
            st.write("Filas seleccionadas: ", filas_seleccionadas)
            for x in filas_seleccionadas:
-               st.write("Fila ", x)
+               st.write(f"Fila: **{x}**")
         
            filas_a_eliminar = tabla.index[filas_seleccionadas]
            #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
