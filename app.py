@@ -49,7 +49,7 @@ elif opcion == "Ejercicio 2":
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
    gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
 
-   pills_selection = st.pills("Opción", ["Agregar", "Evaluar activadades"], selection_mode="single")
+   pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single")
 
    if pills_selection == "Agregar":   #st.button("Agregar", type="primary"):
        if nombre:
