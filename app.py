@@ -86,10 +86,9 @@ elif opcion == "Ejercicio 2":
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
            st.write("Filas a eliminar: ", len(indices_seleccionados))
 
-           st.session_state.actividades = [
-            actividad
-            for i, actividad in enumerate(st.session_state.actividades)
-            if i not in indices_seleccionados ]
+           st.session_state.actividades = [ actividad
+                                            for i, actividad in enumerate(st.session_state.actividades)
+                                            if i not in indices_seleccionados ]
            st.rerun()
 
 elif opcion == "Ejercicio 3":
