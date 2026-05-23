@@ -86,7 +86,7 @@ elif opcion == "Ejercicio 2":
    if filas_seleccionados:
        if st.button("❌ Eliminar filas seleccionadas!", type="primary"):
            filas_a_eliminar = tabla.index[filas_seleccionados]
-           st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
+           #st.session_state.actividades = st.session_state.actividades.drop(filas_a_eliminar)
 
 
 elif opcion == "Ejercicio 3":
