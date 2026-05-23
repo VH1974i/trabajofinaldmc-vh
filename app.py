@@ -5,9 +5,6 @@ import numpy as np
 if "actividades" not in st.session_state:
     st.session_state.actividades = []
 
-if "pills_key" not in st.session_state:
-    st.session_state["pills_key"] = None
-
 st.sidebar.image("dmc.png")
 st.sidebar.title("Opciones")
 
@@ -52,9 +49,7 @@ elif opcion == "Ejercicio 2":
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
    gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0, step=500)
 
-   pills_selection = st.pills("Opción", ["Agregar", "Evaluar actividades"], selection_mode="single", key=st.session_state["pills_key"])
-
-   if pills_selection == "Agregar":   #st.button("Agregar", type="primary"):
+   if st.button("Agregar", type="primary"):
        if nombre:
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
@@ -74,20 +69,14 @@ elif opcion == "Ejercicio 2":
                st.session_state.actividades.append(registro)
                st.success(f"¡Registro agregado satisfactoriamente!")
                
-       st.session_state["pills_key"] = None
-       st.rerun()
-
-   if pills_selection == "Evaluar actividades": #st.button("Evaluar actividades!"):
+   if st.button("Evaluar actividades!"):
        for actividad in st.session_state.actividades:
            if actividad["Gasto real"] <= actividad["Presupuesto"]:
                actividad["Estado"] = "Gasto está dentro del presupuesto!"
            else:
                actividad["Estado"] = "Presupuesto fue excedido!"
 
-       st.session_state["pills_key"] = None
-       st.rerun()
-
-   #st.rerun()
+   st.rerun()
    df_actividades = pd.DataFrame(st.session_state.actividades)
    evento = st.dataframe(df_actividades, on_select="rerun", selection_mode="multi-row", width="content")
    st.write("Registros", len(st.session_state.actividades))
