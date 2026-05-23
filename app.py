@@ -90,8 +90,7 @@ elif opcion == "Ejercicio 2":
            st.session_state.actividades = [ actividad
                                             for i, actividad in enumerate(st.session_state.actividades)
                                             if i not in indices_seleccionados ]
-#           st.rerun()
-           st.success("Las actividades fueron evaluadas!")
+           st.rerun()
 
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
