@@ -5,7 +5,7 @@ import numpy as np
 if "actividades" not in st.session_state:
     st.session_state.actividades = []
 
-if "mi_pills_selection_key" not in st.session_state:
+if "mi_pills" not in st.session_state:
     st.session_state["mi_pills"] = None
 
 st.sidebar.image("dmc.png")
