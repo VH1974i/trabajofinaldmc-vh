@@ -49,7 +49,9 @@ elif opcion == "Ejercicio 2":
    ppto   = st.number_input("Ingrese el presupuesto", min_value =0, value=0, step=1000)
    gasto  = st.number_input("Ingrese el gasto", min_value =0, value=0)
 
-   if st.button("Agregar", type="primary"):
+   pills_selection = st.pills("Opción", ["Agregar", "Evaluar activadades"], selection_mode="single")
+
+   if pills_selection = "Agregar"   #st.button("Agregar", type="primary"):
        if nombre:
            registro = { "Nombre": nombre,
                         "Tipo": tipo,
@@ -69,7 +71,7 @@ elif opcion == "Ejercicio 2":
                st.session_state.actividades.append(registro)
                st.success(f"¡Registro agregado satisfactoriamente!")
 
-   if st.button("Evaluar actividades!"):
+   if pills_selection = "Evaluar actividades" #st.button("Evaluar actividades!"):
        for actividad in st.session_state.actividades:
            if actividad["Gasto real"] <= actividad["Presupuesto"]:
                actividad["Estado"] = "Gasto está dentro del presupuesto!"
