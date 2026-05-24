@@ -96,6 +96,17 @@ elif opcion == "Ejercicio 2":
 
 elif opcion == "Ejercicio 3":
    st.write("¡Bienvenido al menú Ejercicio 3!")
+   st.subheader("Funciones y Programación Funcional")
+
+   tasa   = st.slider("Seleccione la tasa", min_value= 0, max_value= 100, value=10)
+   meses  = st.number_input("Ingrese la cantidad de meses", min_value =0, value=0, step=5)
+
+   if st.button("Calcular", type="primary"):
+       if len(st.session_state.actividades)>0:
+           calcular_retorno = map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades)
+           st.write(calcular_retorno, list(calcular_retorno))
+       else:
+           st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
 
 elif opcion == "Ejercicio 4":
    st.write("¡Bienvenido al menú Ejercicio 4!")
