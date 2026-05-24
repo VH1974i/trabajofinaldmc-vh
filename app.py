@@ -105,6 +105,10 @@ elif opcion == "Ejercicio 3":
        if len(st.session_state.actividades)>0:
            calcular_retorno = map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades)
            st.write(calcular_retorno, list(calcular_retorno))
+           
+           for actividad in calcular_retorno:
+               st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']}")
+       
        else:
            st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
 
