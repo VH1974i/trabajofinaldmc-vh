@@ -23,4 +23,5 @@ Aplicación en Streamlit Cloud: https://trabajofinaldmc-vh.streamlit.app/
 
 # Autor 
 Victor Hugo Ramírez Ruiz
+
 2026
