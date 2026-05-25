@@ -120,10 +120,10 @@ elif opcion == "Ejercicio 4":
    if st.button("Mostrar info", type="primary"):
        if len(st.session_state.actividades)>0:
            for i, var in enumerate(st.session_state.actividades):
-               actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
-               st.write(f"Registro de actividad {i}:    [{actividad_reg.nombre}]")
-               st.write(actividad_reg.mostrar_info())
-               if actividad_reg.esta_en_presupuesto():
+               registro = Actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
+               st.write(f"Registro de actividad {i}:    [{registro.nombre}]")
+               st.write(registro.mostrar_info())
+               if registro.esta_en_presupuesto():
                    st.success("Cumple con el presupuesto!")
                else:
                    st.warning("No cumple con el presupuesto!")
