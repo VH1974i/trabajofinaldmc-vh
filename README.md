@@ -15,3 +15,7 @@ programación funcional y POO.
 # Instrucciones de ejecución 
 1. Instalar dependencias
 2. Ejecutar: streamlit run app.py 
+
+# Enlaces
+Repositorio GitHub: (colocar enlace)
+Aplicación en Streamlit Cloud: (colocar enlace) 
