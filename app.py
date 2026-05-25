@@ -121,5 +121,6 @@ elif opcion == "Ejercicio 4":
        for var in st.session_state.actividades:
            actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
            st.write(f"Actividad  {actividad_reg.nombre}")
+           st.write(actividad_reg.mostrar_info())
 
        
