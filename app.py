@@ -109,9 +109,10 @@ elif opcion == "Ejercicio 3":
            st.divider()
 
            for i, actividad in enumerate(st.session_state.actividades):
-                  st.write(f"Actividad **{actividad['Nombre']}**\t Presupuesto {actividad['Presupuesto']:,.2f};\t Tasa {tasa}%;\t Meses {meses};\t Retorno **{calcular_retorno[i]:,.2f}**")
+                  st.write(f"Actividad **{actividad['Nombre']}**   Presupuesto {actividad['Presupuesto']:,.2f};   Tasa {tasa}%;   Meses {meses};   Retorno **{calcular_retorno[i]:,.2f}**")
        else:
            st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
 
 elif opcion == "Ejercicio 4":
    st.write("¡Bienvenido al menú Ejercicio 4!")
+   st.subheader("Programación Orientada a Objetos (POO)")
