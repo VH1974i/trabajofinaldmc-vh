@@ -121,7 +121,7 @@ elif opcion == "Ejercicio 4":
        if len(st.session_state.actividades)>0:
            for i, var in enumerate(st.session_state.actividades):
                registro = Actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
-               st.write(f"Registro de actividad {i}:    [{registro.nombre}]")
+               st.write(f"Resumen de actividad {i}: &nbsp;&nbsp;&nbsp;&nbsp; [{registro.nombre}]")
                st.write(registro.mostrar_info())
                if registro.esta_en_presupuesto():
                    st.success("Cumple con el presupuesto!")
