@@ -22,7 +22,7 @@ if opcion == "Home":
    st.write("Curso : Python Fundamentals")
    st.write("Año   : 2026")
    st.write("Alumno: Victor Hugo Ramírez Ruiz")
-   st.write("Tecnologías utilizadas: Python, Streamlit.")
+   st.write("Tecnologías utilizadas: Python, Streamlit, Pandas.")
     
 elif opcion == "Ejercicio 1":
    st.write("¡Bienvenido al menú Ejercicio 1!")
