@@ -103,11 +103,10 @@ elif opcion == "Ejercicio 3":
 
    if st.button("Calcular", type="primary"):
        if len(st.session_state.actividades)>0:
-           calcular_retorno = map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades)
-           st.write(calcular_retorno, list(calcular_retorno), calcular_retorno)
+           calcular_retorno = list(map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades))
 
            for i, actividad in enumerate(st.session_state.actividades):
-                  st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']} Retorno {i} {calcular_retorno[0]}")
+                  st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']}; Tasa {tasa}; Meses {meses}; Retorno {calcular_retorno[i]}")
        
        else:
            st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
