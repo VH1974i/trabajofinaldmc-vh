@@ -17,5 +17,5 @@ programación funcional y POO.
 2. Ejecutar: streamlit run app.py 
 
 # Enlaces
-Repositorio GitHub: (colocar enlace)
+Repositorio GitHub: [https://github.com/VH1974i/trabajofinaldmc-vh]
 Aplicación en Streamlit Cloud: (colocar enlace) 
