@@ -6,7 +6,7 @@ programación como variables, condicionales, estructuras de datos, funciones,
 programación funcional y POO. 
 
 # Estructura 
-• app.py 
+• app.py
 • requirements.txt
 • clase_actividad.py
 • dmc.png
