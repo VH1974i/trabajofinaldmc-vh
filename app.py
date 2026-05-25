@@ -120,6 +120,6 @@ elif opcion == "Ejercicio 4":
    if len(st.session_state.actividades)>0:
        for var in st.session_state.actividades:
            actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
-           st.write(f"Actividad  {actividad_reg["nombre"]}   {actividad_reg["tipo"]}   {actividad_reg["presupuesto"]}   {actividad_reg["gasto_real"]}   {actividad_reg["esta_en_presupuesto"]}")
+           st.write(f"Actividad  {actividad_reg.nombre}")
 
        
