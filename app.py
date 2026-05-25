@@ -104,7 +104,7 @@ elif opcion == "Ejercicio 3":
    if st.button("Calcular", type="primary"):
        if len(st.session_state.actividades)>0:
            calcular_retorno = map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades)
-           st.write(calcular_retorno, list(calcular_retorno))
+           st.write(calcular_retorno, list(calcular_retorno), calcular_retorno)
 
            for i, actividad in enumerate(st.session_state.actividades):
                   st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']} Retorno {i}")
