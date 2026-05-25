@@ -1,4 +1,4 @@
-class actividad:
+class Actividad:
   def __init__(self, nombre, tipo, presupuesto, gasto_real):
     self.nombre      = nombre
     self.tipo        = tipo
@@ -15,7 +15,7 @@ class actividad:
     return {
         "nombre": self.nombre,
         "tipo": self.tipo,
-        "presupuesto": self.presupuesto,
-        "gasto_real": self.gasto_real,
+        "presupuesto": round(self.presupuesto,2),
+        "gasto_real": round(self.gasto_real,2),
         "esta_en_presupuesto": self.esta_en_presupuesto()
     }
