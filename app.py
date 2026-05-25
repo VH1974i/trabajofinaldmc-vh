@@ -106,6 +106,7 @@ elif opcion == "Ejercicio 3":
            calcular_retorno = list(map(lambda x: x["Presupuesto"]*(tasa/100)*meses, st.session_state.actividades))
 
            st.write("##### Listado de retorno esperado por actividad!")
+           st.divider()
 
            for i, actividad in enumerate(st.session_state.actividades):
                   st.write(f"Actividad **{actividad['Nombre']}**\t Presupuesto {actividad['Presupuesto']:,.2f};\t Tasa {tasa}%;\t Meses {meses};\t Retorno **{calcular_retorno[i]:,.2f}**")
