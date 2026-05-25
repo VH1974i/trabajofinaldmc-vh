@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+from clase_actividad import actividad
 
 if "actividades" not in st.session_state:
     st.session_state.actividades = []
@@ -116,3 +116,10 @@ elif opcion == "Ejercicio 3":
 elif opcion == "Ejercicio 4":
    st.write("¡Bienvenido al menú Ejercicio 4!")
    st.subheader("Programación Orientada a Objetos (POO)")
+
+   if len(st.session_state.actividades)>0:
+       for var in st.session_state.actividades:
+           actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
+           st.write(f"Actividad  {actividad_reg["nombre"]}   {actividad_reg["tipo"]}   {actividad_reg["presupuesto"]   {actividad_reg["gasto_real"]}   {actividad_reg["esta_en_presupuesto"]}")
+
+       
