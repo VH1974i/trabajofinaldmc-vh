@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from clase_actividad import actividad
+from clase_actividad import Actividad
 
 if "actividades" not in st.session_state:
     st.session_state.actividades = []
