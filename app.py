@@ -117,13 +117,16 @@ elif opcion == "Ejercicio 4":
    st.write("¡Bienvenido al menú Ejercicio 4!")
    st.subheader("Programación Orientada a Objetos (POO)")
 
-   if len(st.session_state.actividades)>0:
-       for i, var in enumerate(st.session_state.actividades):
-           actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
-           st.write(f"Registro de actividad {i}:    [{actividad_reg.nombre}]")
-           st.write(actividad_reg.mostrar_info())
-           if actividad_reg.esta_en_presupuesto():
-               st.success("Cumple con el presupuesto!")
-           else:
-               st.warning("No cumple con el presupuesto!")
+   if st.button("Mostrar info", type="primary"):
+       if len(st.session_state.actividades)>0:
+           for i, var in enumerate(st.session_state.actividades):
+               actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
+               st.write(f"Registro de actividad {i}:    [{actividad_reg.nombre}]")
+               st.write(actividad_reg.mostrar_info())
+               if actividad_reg.esta_en_presupuesto():
+                   st.success("Cumple con el presupuesto!")
+               else:
+                   st.warning("No cumple con el presupuesto!")
+       else:
+           st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
        
