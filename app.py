@@ -118,9 +118,9 @@ elif opcion == "Ejercicio 4":
    st.subheader("Programación Orientada a Objetos (POO)")
 
    if len(st.session_state.actividades)>0:
-       for var in st.session_state.actividades:
+       for i, var in enumerate(st.session_state.actividades):
            actividad_reg = actividad(var["Nombre"], var["Tipo"], var["Presupuesto"], var["Gasto real"])
-           st.write(f"Actividad  {actividad_reg.nombre}")
+           st.write(f"Registro de actividad {i}:    {actividad_reg.nombre}")
            st.write(actividad_reg.mostrar_info())
 
        
