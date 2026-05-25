@@ -107,7 +107,7 @@ elif opcion == "Ejercicio 3":
            st.write(calcular_retorno, list(calcular_retorno), calcular_retorno)
 
            for i, actividad in enumerate(st.session_state.actividades):
-                  st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']} Retorno {i}")
+                  st.write(f"Actividad {actividad['Nombre']} Presupuesto {actividad['Presupuesto']} Retorno {i} {calcular_retorno[i]}")
        
        else:
            st.warning("!No hay actividades cargadas previamente en el ejercicio 2!")
